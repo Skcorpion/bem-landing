@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BEM</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__logo">
+          <img src="./images/header-logo.png" alt="" />
+        </div>
+        <div class="header__headtext">
+          <div class="header__title">
+            Clear, smart, attractive design
+          </div>
+          <div class="header__subtitle">
+            for your app, logo, website
+          </div>
+        </div>
+        <div class="header__btn">
+          <div class="btn">
+            <a href="#">read more</a>
+          </div>
+          <div class="header__arrow-down">
+            <img src="./images/arrow-down.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="header__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#">home</a></li>
+        <li class="menu__item"><a href="#">about us</a></li>
+        <li class="menu__item"><a href="#">portfolio</a></li>
+        <li class="menu__item"><a href="#">contact</a></li>
+      </ul>
+    </nav>
+    <section class="about">
+      <div class="container">
+        <div class="about__header">
+          <div class="about__title title">ABOUT</div>
+          <div class="about__text">
+            We specialize in contemporary, functional, and stunning websites
+            with design that really brings that "WOW" factor. In our design
+            process, we make sure to stay one step ahead of the latest trends,
+            never forgetting to abide by key web standards.
+          </div>
+        </div>
+        <div class="about__row">
+          <div class="about__column">
+            <div class="item-about">
+              <div class="item-about__icon">
+                <img src="./images/about/01.png" alt="" />
+              </div>
+              <div class="item-about__title">web</div>
+              <div class="item-about__text">
+                We tend to deliver unique and functional design, through
+                innovation and creativity.
+              </div>
+            </div>
+          </div>
+          <div class="about__column">
+            <div class="item-about">
+              <div class="item-about__icon">
+                <img src="./images/about/02.png" alt="" />
+              </div>
+              <div class="item-about__title">ios and android</div>
+              <div class="item-about__text">
+                We seek to bring new businesses and customers closer together
+                through valuable insights and proper targeting.
+              </div>
+            </div>
+          </div>
+          <div class="about__column">
+            <div class="item-about">
+              <div class="item-about__icon">
+                <img src="./images/about/03.png" alt="" />
+              </div>
+              <div class="item-about__title">marketing</div>
+              <div class="item-about__text">
+                We’ll help you establish the right goals and build the right
+                paths. Success depends on setting the right intention.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <div class="container">
+        <div class="portfolio__title title">
+          portfolio
+        </div>
+        <nav class="portfolio__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#">all</a></li>
+            <li class="menu__item"><a href="#">web</a></li>
+            <li class="menu__item"><a href="#">apps</a></li>
+            <li class="menu__item"><a href="#">other</a></li>
+          </ul>
+        </nav>
+        <div class="portfolio__row">
+          <div class="portfolio__column">
+            <a href="#">
+              <img src="./images/project-00.jpg" alt="" />
+            </a>
+          </div>
+          <div class="portfolio__column">
+            <a href="#">
+              <img src="./images/project-00.jpg" alt="" />
+            </a>
+          </div>
+          <div class="portfolio__column">
+            <a href="#">
+              <img src="./images/project-00.jpg" alt="" />
+            </a>
+          </div>
+          <div class="portfolio__column">
+            <a href="#">
+              <img src="./images/project-00.jpg" alt="" />
+            </a>
+          </div>
+          <div class="portfolio__column">
+            <a href="#">
+              <img src="./images/project-00.jpg" alt="" />
+            </a>
+          </div>
+          <div class="portfolio__column">
+            <a href="#">
+              <img src="./images/project-00.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="portfolio__btn btn">
+          <a href="#">read more</a>
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+      <div class="partners__title">
+        Our partners
+      </div>
+      <div class="partners__row">
+        <div class="partners__item">
+          <a href="#"><img src="./images/partners/01.png" alt=""></a>
+        </div>
+        <div class="partners__item">
+          <a href="#"><img src="./images/partners/02.png" alt=""></a>
+        </div>
+        <div class="partners__item">
+          <a href="#"><img src="./images/partners/03.png" alt=""></a>
+        </div>
+        <div class="partners__item">
+          <a href="#"><img src="./images/partners/04.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container">
+        <div class="contact__title title">contact</div>
+        <div class="contact__body">
+            <form class="contact__form">
+              <div class="contact__form-username">
+                <label for="name">your name</label>
+                <input id="name" type="text" name="user_name" required>
+              </div>
+              <div class="contact__form-mail">
+                <label for="mail">your e-mail</label>
+                <input id="mail" type="email" name="user_mail" required>
+              </div>
+              <div class="contact__form-message">
+                <label for="message">message</label>
+                <textarea id="message" name="user_message" cols="30" rows="10" required></textarea>
+              </div>
+              <div class="contact__form-btn">
+                <button type="submit">send</button>
+              </div>
+            </form>
+          <div class="contact__info">
+            <div class="contact__text">Have an idea for a project? Just looking to 
+              explore and see the possibilities?<br>
+              I'm here to help.</div>
+            <div class="contact__name">
+              Postma Elena
+            </div>
+            <div class="contact__links">
+              <a href="#" class="contact__links-item">
+                <img src="./images/facebook.png" alt="">
+              </a>
+              <a href="#" class="contact__links-item">
+                <img src="./images/linkedin.png" alt="">
+              </a>
+            </div>
+            <div class="contact__email">
+              e-mail: <span>postma.elena@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__body">
+        <div class="footer__logo">
+          <img src="./images/footer-logo.png" alt="">
+        </div>
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item"><a href="#">Home</a></li>
+            <li class="footer__menu-item"><a href="#">Facebook</a></li>
+            <li class="footer__menu-item"><a href="#">Linkedin</a></li>
+            <li class="footer__menu-item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer__copy">
+          © 2015. All Rights Reserved 
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

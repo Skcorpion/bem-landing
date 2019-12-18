@@ -1,0 +1,100 @@
+@media (max-width: 850px) {
+  .contact__title {
+    margin: 100px 0 60px;
+  }
+  .contact__form {
+    margin: 0;
+  }
+  .contact__body {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__info {
+    text-align: center;
+    margin-top: 35px;
+  }
+  .contact__links {
+    justify-content: center;
+  }
+  .header {
+    &__title {
+      font-size: 30px;
+    }
+    &__subtitle {
+      font-size: 22px;
+    }
+  }
+  .partners__title {
+    padding: 60px 0 50px;
+  }
+  .partners__row {
+    padding-bottom: 70px;
+  }
+  .about__header {
+    margin-top: 80px;
+  }
+  .about__text {
+    max-width: 527px;
+  }
+  .portfolio__menu {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-height: 840px) {
+  .header {
+    &__logo {
+      margin-top: 100px;
+    }
+    &__headtext {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: 779px) {
+  .about__row {
+    flex-direction: column;
+  }
+  .about__column:nth-child(-n + 2) {
+    margin-bottom: 40px;
+  }
+  .portfolio__column {
+    width: auto;
+  }
+}
+
+@media (max-height: 600px) {
+  .header__logo img {
+    width: 120px;
+  }
+  .header__subtitle {
+    padding-bottom: 0.9em;
+  }
+}
+
+@media (max-width: 460px) {
+  .contact__form {
+    grid-template-areas:
+      "name name"
+      "mail mail"
+      "msg msg"
+      "btn btn";
+  }
+  .contact__form-username {
+    margin-bottom: 27px;
+  }
+  .header {
+    &__title {
+      font-size: 25px;
+    }
+    &__subtitle {
+      font-size: 17px;
+    }
+  }
+  .partners__item {
+    img {
+      width: 77%;
+    }
+  }
+}

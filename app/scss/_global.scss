@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -80,6 +81,10 @@ li {
     font-weight: 400;
     a {
       color: #000;
+    }
+    &_current a {
+      color: #ada074;
+      font-weight: 700;
     }
   }
 }

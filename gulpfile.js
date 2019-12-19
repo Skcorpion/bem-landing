@@ -28,7 +28,8 @@ gulp.task("scss", function() {
 
 gulp.task("css", function() {
   return gulp
-    .src(["node_modules/normalize.css/normalize.css"])
+    .src(["node_modules/normalize.css/normalize.css",
+    "node_modules/animate.css/animate.css"])
     .pipe(concat("_libs.scss"))
     .pipe(gulp.dest("app/scss"))
     .pipe(browserSync.reload({ stream: true }));

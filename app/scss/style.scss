@@ -55,7 +55,7 @@
 
 .about {
   &__header {
-    margin: 125px 0 60px;
+    padding: 125px 0 60px;
   }
   &__title {
     margin-bottom: 1em;
@@ -108,25 +108,31 @@
     padding-top: 100px;
   }
   &__menu {
-    margin: 20px 0 100px;
+    margin: 20px 0 35px;
     .menu__list {
       max-width: 320px;
     }
   }
-  &__row {
+  &__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  &__column {
+  &__item {
     width: 49%;
     margin-bottom: 8px;
     img {
       width: 100%;
+      object-fit: cover;
+      height: 330px;
+      border: 3px rgba(173, 160, 116, 0.5) solid;
+    }
+    &_disable {
+      display: none;
     }
   }
   &__btn {
-    margin: 50px 0 60px;
+    padding: 50px 0 60px;
     a {
       color: #000;
     }
@@ -156,7 +162,8 @@
 
 .contact {
   &__title {
-    margin: 175px 0 100px;
+    padding-top: 175px;
+    margin-bottom: 100px;
   }
   &__body {
     display: flex;

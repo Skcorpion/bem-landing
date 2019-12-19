@@ -1,6 +1,7 @@
 @media (max-width: 850px) {
   .contact__title {
-    margin: 100px 0 60px;
+    padding-top: 100px;
+    margin-bottom: 60px;
   }
   .contact__form {
     margin: 0;
@@ -31,13 +32,10 @@
     padding-bottom: 70px;
   }
   .about__header {
-    margin-top: 80px;
+    padding-top: 80px;
   }
   .about__text {
     max-width: 527px;
-  }
-  .portfolio__menu {
-    margin-bottom: 35px;
   }
 }
 
@@ -59,8 +57,9 @@
   .about__column:nth-child(-n + 2) {
     margin-bottom: 40px;
   }
-  .portfolio__column {
+  .portfolio__item {
     width: auto;
+    margin-bottom: 20px;
   }
 }
 
@@ -96,5 +95,8 @@
     img {
       width: 77%;
     }
+  }
+  .portfolio__item img {
+    height: 230px;
   }
 }

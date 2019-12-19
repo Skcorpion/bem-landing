@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <header class="header">
+    <header id="home" class="header">
       <div class="container header__container">
         <div class="header__logo">
           <img src="./images/header-logo.png" alt="" />
@@ -26,10 +26,10 @@
           </div>
         </div>
         <div class="header__btn">
-          <div class="btn">
-            <a href="#">read more</a>
-          </div>
-          <div class="header__arrow-down">
+          <a class="btn" href="#">
+            read more
+          </a>
+          <div class="header__arrow-down animated fadeInDown infinite slow">
             <img src="./images/arrow-down.png" alt="" />
           </div>
         </div>
@@ -37,13 +37,13 @@
     </header>
     <nav class="header__menu menu">
       <ul class="menu__list">
-        <li class="menu__item"><a href="#">home</a></li>
-        <li class="menu__item"><a href="#">about us</a></li>
-        <li class="menu__item"><a href="#">portfolio</a></li>
-        <li class="menu__item"><a href="#">contact</a></li>
+        <li class="menu__item menu__item_current"><a href="#home">home</a></li>
+        <li class="menu__item"><a href="#about">about us</a></li>
+        <li class="menu__item"><a href="#portfolio">portfolio</a></li>
+        <li class="menu__item"><a href="#contact">contact</a></li>
       </ul>
     </nav>
-    <section class="about">
+    <section id="about" class="about">
       <div class="container">
         <div class="about__header">
           <div class="about__title title">ABOUT</div>
@@ -94,53 +94,53 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="portfolio__title title">
           portfolio
         </div>
         <nav class="portfolio__menu menu">
           <ul class="menu__list">
-            <li class="menu__item"><a href="#">all</a></li>
-            <li class="menu__item"><a href="#">web</a></li>
-            <li class="menu__item"><a href="#">apps</a></li>
-            <li class="menu__item"><a href="#">other</a></li>
+            <li class="menu__item menu__item_current"><a href="#">all</a></li>
+            <li class="menu__item menu__item-web"><a href="#">web</a></li>
+            <li class="menu__item menu__item-apps"><a href="#">apps</a></li>
+            <li class="menu__item menu__item-other"><a href="#">other</a></li>
           </ul>
         </nav>
-        <div class="portfolio__row">
-          <div class="portfolio__column">
+        <div class="portfolio__items">
+          <div class="portfolio__item portfolio__item-web">
             <a href="#">
-              <img src="./images/project-00.jpg" alt="" />
+              <img src="./images/projects/web-01.jpg" alt="" />
             </a>
           </div>
-          <div class="portfolio__column">
+          <div class="portfolio__item portfolio__item-apps">
             <a href="#">
-              <img src="./images/project-00.jpg" alt="" />
+              <img src="./images/projects/app-01.jpg" alt="" />
             </a>
           </div>
-          <div class="portfolio__column">
+          <div class="portfolio__item portfolio__item-web">
             <a href="#">
-              <img src="./images/project-00.jpg" alt="" />
+              <img src="./images/projects/web-02.jpg" alt="" />
             </a>
           </div>
-          <div class="portfolio__column">
+          <div class="portfolio__item">
             <a href="#">
-              <img src="./images/project-00.jpg" alt="" />
+              <img src="./images/projects/other-01.jpg" alt="" />
             </a>
           </div>
-          <div class="portfolio__column">
+          <div class="portfolio__item portfolio__item-web">
             <a href="#">
-              <img src="./images/project-00.jpg" alt="" />
+              <img src="./images/projects/web-03.jpg" alt="" />
             </a>
           </div>
-          <div class="portfolio__column">
+          <div class="portfolio__item portfolio__item-apps">
             <a href="#">
-              <img src="./images/project-00.jpg" alt="" />
+              <img src="./images/projects/app-02.jpg" alt="" />
             </a>
           </div>
         </div>
-        <div class="portfolio__btn btn">
-          <a href="#">read more</a>
+        <div class="portfolio__btn">
+          <a class="btn" href="#">read more</a>
         </div>
       </div>
     </section>
@@ -163,7 +163,7 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="container">
         <div class="contact__title title">contact</div>
         <div class="contact__body">
@@ -225,7 +225,7 @@
       </div>
     </footer>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

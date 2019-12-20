@@ -28,8 +28,11 @@ gulp.task("scss", function() {
 
 gulp.task("css", function() {
   return gulp
-    .src(["node_modules/normalize.css/normalize.css",
-    "node_modules/animate.css/animate.css"])
+    .src([
+      "node_modules/normalize.css/normalize.css",
+      "node_modules/slick-carousel/slick/slick.css",
+      "node_modules/animate.css/animate.css"
+    ])
     .pipe(concat("_libs.scss"))
     .pipe(gulp.dest("app/scss"))
     .pipe(browserSync.reload({ stream: true }));
@@ -41,6 +44,15 @@ gulp.task("html", function() {
 
 gulp.task("script", function() {
   return gulp.src("app/js/*.js").pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task("js", function() {
+  return gulp
+    .src(["node_modules/slick-carousel/slick/slick.js"])
+    .pipe(concat("libs.min.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("app/js"))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
 // Static server
@@ -68,4 +80,7 @@ gulp.task("watch", function() {
 
 gulp.task("build", gulp.series("clean", "export"));
 
-gulp.task("default", gulp.parallel("css", "scss", "browser-sync", "watch"));
+gulp.task(
+  "default",
+  gulp.parallel("css", "scss", "js", "browser-sync", "watch")
+);

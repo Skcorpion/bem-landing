@@ -1,53 +1,53 @@
-let secMenuItems = document.querySelectorAll("#portfolio .menu__item"),
-  portfolioItems = document.querySelectorAll(".portfolio__item");
+// let secMenuItems = document.querySelectorAll("#portfolio .menu__item"),
+//   portfolioItems = document.querySelectorAll(".portfolio__item");
 
-secMenuItems.forEach(menuItem =>
-  menuItem.addEventListener("click", function(e) {
-    e.preventDefault();
-    //remove all currents
-    secMenuItems.forEach(function(item) {
-      if (item.classList.contains("menu__item_current")) {
-        item.classList.remove("menu__item_current");
-      }
-    });
-    //add current
-    menuItem.classList.add("menu__item_current");
-    //remove all disables
-    portfolioItems.forEach(function(item) {
-      item.classList.remove("portfolio__item_disable");
-    });
+// secMenuItems.forEach(menuItem =>
+//   menuItem.addEventListener("click", function(e) {
+//     e.preventDefault();
+//     //remove all currents
+//     secMenuItems.forEach(function(item) {
+//       if (item.classList.contains("menu__item_current")) {
+//         item.classList.remove("menu__item_current");
+//       }
+//     });
+//     //add current
+//     menuItem.classList.add("menu__item_current");
+//     //remove all disables
+//     portfolioItems.forEach(function(item) {
+//       item.classList.remove("portfolio__item_disable");
+//     });
 
-    //web filter
-    if (menuItem.classList.contains("menu__item-web")) {
-      portfolioItems.forEach(function(item) {
-        if (!item.classList.contains("portfolio__item-web")) {
-          item.classList.add("portfolio__item_disable");
-        }
-      });
-    }
+//     //web filter
+//     if (menuItem.classList.contains("menu__item-web")) {
+//       portfolioItems.forEach(function(item) {
+//         if (!item.classList.contains("portfolio__item-web")) {
+//           item.classList.add("portfolio__item_disable");
+//         }
+//       });
+//     }
 
-    //apps filter
-    if (menuItem.classList.contains("menu__item-apps")) {
-      portfolioItems.forEach(function(item) {
-        if (!item.classList.contains("portfolio__item-apps")) {
-          item.classList.add("portfolio__item_disable");
-        }
-      });
-    }
+//     //apps filter
+//     if (menuItem.classList.contains("menu__item-apps")) {
+//       portfolioItems.forEach(function(item) {
+//         if (!item.classList.contains("portfolio__item-apps")) {
+//           item.classList.add("portfolio__item_disable");
+//         }
+//       });
+//     }
 
-    //other filter
-    if (menuItem.classList.contains("menu__item-other")) {
-      portfolioItems.forEach(function(item) {
-        if (
-          item.classList.contains("portfolio__item-web") ||
-          item.classList.contains("portfolio__item-apps")
-        ) {
-          item.classList.add("portfolio__item_disable");
-        }
-      });
-    }
-  })
-);
+//     //other filter
+//     if (menuItem.classList.contains("menu__item-other")) {
+//       portfolioItems.forEach(function(item) {
+//         if (
+//           item.classList.contains("portfolio__item-web") ||
+//           item.classList.contains("portfolio__item-apps")
+//         ) {
+//           item.classList.add("portfolio__item_disable");
+//         }
+//       });
+//     }
+//   })
+// );
 
 // Cache selectors
 var lastId,
@@ -86,5 +86,22 @@ $(window).scroll(function() {
       .filter("[href='#" + id + "']")
       .parent()
       .addClass("menu__item_current");
+  }
+});
+
+//Slick Slider
+$(".portfolio__slider").slick({
+  dots: true,
+  arrows: false,
+  infinite: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  speed: 900,
+  customPaging: function(slider, i) {
+    var title = $(slider.$slides[i])
+      .find("[data-title]")
+      .data("title");
+    return '<div class="menu__item"> ' + title + " </div>";
   }
 });
